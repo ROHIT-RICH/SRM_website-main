@@ -156,34 +156,40 @@ export function Footer() {
       icon: FaLinkedinIn,
       href: "https://www.linkedin.com/company/srm-innovations-hub",
       label: "LinkedIn",
+      handle: "@srm-innovations-hub",
       active: true,
     },
     {
       icon: FaGithub,
       label: "GitHub",
+      handle: "@srminnovationshub",
       active: false,
     },
     {
       icon: FaInstagram,
       label: "Instagram",
+      handle: "@srminnovationshub",
       active: false,
     },
     {
       icon: FaFacebookF,
       label: "Facebook",
+      handle: "@srminnovationshub",
       active: false,
     },
     {
       icon: FaXTwitter,
-      label: "X",
+      label: "X (Twitter)",
+      handle: "@srminnovationshub",
       active: false,
     },
     {
       icon: FaYoutube,
       label: "YouTube",
+      handle: "@SRMInnovationsHub",
       active: false,
     },
-  ].map(({ icon: Icon, href, label, active }) => (
+  ].map(({ icon: Icon, href, label, handle, active }) => (
     <div key={label} className="group relative">
       {active ? (
         <a
@@ -232,42 +238,78 @@ export function Footer() {
             opacity-70
             transition-all
             duration-300
+            hover:-translate-y-1
             hover:border-amber-400
             hover:bg-amber-500/10
             hover:text-amber-300
+            hover:shadow-[0_0_20px_rgba(251,191,36,0.25)]
           "
         >
-          <Icon className="h-5 w-5" />
+          <Icon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
         </button>
       )}
 
-      {!active && (
+      {/* Tooltip */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-1/2
+          top-[-52px]
+          z-20
+          -translate-x-1/2
+          whitespace-nowrap
+          rounded-lg
+          border
+          border-white/10
+          bg-[#0f172a]
+          px-3
+          py-2
+          text-[11px]
+          font-medium
+          text-white
+          opacity-0
+          shadow-xl
+          transition-all
+          duration-200
+          group-hover:top-[-58px]
+          group-hover:opacity-100
+        "
+      >
+        {active ? (
+          <div className="flex flex-col items-center">
+            <span className="font-semibold">{handle}</span>
+            <span className="text-[10px] text-cyan-300">
+              Follow us on LinkedIn
+            </span>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center">
+            <span className="font-semibold">{handle}</span>
+            <span className="text-[10px] text-amber-300">
+              Coming Soon
+            </span>
+          </div>
+        )}
+
+        {/* Tooltip Arrow */}
         <div
           className="
-            pointer-events-none
             absolute
-            -top-11
             left-1/2
+            top-full
+            h-2
+            w-2
             -translate-x-1/2
-            whitespace-nowrap
-            rounded-lg
-            border
+            -translate-y-1/2
+            rotate-45
+            border-r
+            border-b
             border-white/10
             bg-[#0f172a]
-            px-3
-            py-1.5
-            text-xs
-            text-white
-            opacity-0
-            shadow-lg
-            transition-all
-            duration-200
-            group-hover:opacity-100
           "
-        >
-          Coming Soon
-        </div>
-      )}
+        />
+      </div>
     </div>
   ))}
 </div>
