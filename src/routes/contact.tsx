@@ -77,7 +77,7 @@ function ContactPage() {
                 </h3>
 
                 <p className="mt-3 text-slate-400">
-                  hello@srminnovations.com
+                  info@srminnovationshub.com
                 </p>
 
               </div>
@@ -91,7 +91,7 @@ function ContactPage() {
                 </h3>
 
                 <p className="mt-3 text-slate-400">
-                  +91 XXXXX XXXXX
+                  +91 98260 32108
                 </p>
 
               </div>
@@ -104,9 +104,15 @@ function ContactPage() {
                   Location
                 </h3>
 
-                <p className="mt-3 text-slate-400">
-                  Bhopal, Madhya Pradesh, India
-                </p>
+                <p>
+    <span className="font-semibold text-white">HQ:</span>{" "}
+    C-1 Balram Nagar, Gwalior, Madhya Pradesh
+  </p>
+
+  <p>
+    <span className="font-semibold text-white">Branch:</span>{" "}
+    Indore, Madhya Pradesh
+  </p>
 
               </div>
 
