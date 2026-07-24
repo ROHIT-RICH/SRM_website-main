@@ -3,24 +3,24 @@ import { SectionHeader } from "./Products";
 
 const quotes = [
   {
-    q: "SRM rebuilt our HR stack from scratch in eight weeks. Payroll that used to take three days now runs in twenty minutes.",
-    a: "Director of Operations",
-    c: "Logistics group · India",
+    q: "The team maintained excellent communication throughout the project and delivered a solution tailored to our business needs.",
+    a: "Director",
+    c: "Client · United Kingdom",
   },
   {
-    q: "We replaced four disconnected tools with one ERP. Inventory accuracy went from 'guessing' to 100%.",
-    a: "Owner",
-    c: "Auto dealership · UAE",
+    q: "SRM Innovations Hub was proactive, professional, and easy to work with. They were always willing to suggest better approaches whenever needed.",
+    a: "Business Owner",
+    c: "Client · United Kingdom",
   },
   {
-    q: "The mobile app SRM built drives 60% of our reorders. It just works — and the team actually answers the phone.",
-    a: "Head of Sales",
-    c: "B2B distributor · UK",
+    q: "We appreciated their structured development process and timely updates. The project was delivered as discussed and met our expectations.",
+    a: "Operations Manager",
+    c: "Client · India",
   },
   {
-    q: "They behave like an internal team. Weekly demos, predictable milestones, zero drama.",
-    a: "CTO",
-    c: "SaaS startup · US",
+    q: "Their technical knowledge and commitment to quality gave us confidence throughout the engagement. We look forward to working together again.",
+    a: "Managing Director",
+    c: "Client",
   },
 ];
 
