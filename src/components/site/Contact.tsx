@@ -82,7 +82,7 @@ ${description}
       `;
 
                   window.open(
-                    `https://wa.me/919630970989?text=${encodeURIComponent(
+                    `https://wa.me/9826032108?text=${encodeURIComponent(
                       whatsappMessage
                     )}`,
                     "_blank"
@@ -120,7 +120,7 @@ ${description}
                   Thanks — we're on it.
                 </h3>
                 <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-                  A founder will reach out within one business day to schedule a
+                 We will reach out within one business day to schedule a
                   call.
                 </p>
               </div>
@@ -190,7 +190,7 @@ ${description}
               title="WhatsApp"
               desc="Fastest response, business hours."
               cta="Open chat"
-              href="https://wa.me/9826032108"
+              href="https://wa.me/919826032108?text=Hello%20SRM%20Innovations%20Hub%2C%0A%0AI%20would%20like%20to%20discuss%20a%20project.%0A%0A%E2%80%A2%20Project%20Type%3A%0A%E2%80%A2%20Budget%3A%0A%E2%80%A2%20Timeline%3A%0A%E2%80%A2%20Preferred%20Meeting%20Time%3A%0A%0ALooking%20forward%20to%20hearing%20from%20you."
             />
             <Quick
               icon={Mail}
