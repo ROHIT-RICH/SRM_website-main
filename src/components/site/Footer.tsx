@@ -84,11 +84,30 @@ export function Footer() {
               systems for growing businesses worldwide.
             </p>
 
-            <div className="mt-5 space-y-2 text-xs text-muted-foreground">
-              <div>info@srminnovationshub.com</div>
-              <div>Indore, Madhya Pradesh, India</div>
+           <div className="mt-5 space-y-4 text-xs text-muted-foreground">
+  <div>
+    <span className="font-semibold text-white">Email</span>
+    <div className="mt-1">info@srminnovationshub.com</div>
+  </div>
 
-            </div>
+  <div>
+    <span className="font-semibold text-white">Head Office</span>
+    <div className="mt-1">
+      C-1 Balram Nagar,
+      <br />
+      Gwalior, Madhya Pradesh
+    </div>
+  </div>
+
+  <div>
+    <span className="font-semibold text-white">Branch Office</span>
+    <div className="mt-1">
+      Indore,
+      <br />
+      Madhya Pradesh
+    </div>
+  </div>
+</div>
           </div>
           {cols.map((c) => (
             <div key={c.title}>
