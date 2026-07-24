@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { Code2, Smartphone, Database, Cloud } from "lucide-react";
+import { Code2, Smartphone, Database, Cloud, Briefcase,
+  Users,
+  ClipboardCheck, } from "lucide-react";
 import founder from "@/assets/founder.png";
 import cofounder from "@/assets/co-founder.png";
 
@@ -15,31 +17,45 @@ type Leader = {
 
 const leaders: Leader[] = [
   {
-    name: "Rohit Vaishya",
-    role: "Founder & Full Stack Developer",
-    bio: "Builds production software end-to-end — from architecture and infrastructure to the last pixel. Obsessed with shipping systems that businesses actually depend on.",
-    expertise: [
-      { icon: Code2, label: "Full Stack Architecture" },
-      { icon: Database, label: "Multi-tenant SaaS" },
-      { icon: Cloud, label: "Cloud & DevOps" },
-    ],
-    stack: ["React", "Node.js", "TypeScript", "MongoDB", "AWS", "Next.js"],
-    image: founder,
-    initials: "RV",
-  },
+  name: "Rohit Vaishya",
+  role: "Founder & CEO",
+  bio: "Leads the vision, technology strategy, and innovation at SRM Innovations Hub. Passionate about building scalable digital products, enterprise software, and AI-driven solutions that help businesses automate operations, accelerate growth, and achieve long-term success.",
+  expertise: [
+    { icon: Code2, label: "Technology Strategy" },
+    { icon: Cloud, label: "Enterprise Solutions" },
+    { icon: Database, label: "AI & Business Automation" },
+  ],
+  stack: [
+    "Business Strategy",
+    "Software Architecture",
+    "Cloud & DevOps",
+    "AI Integration",
+    "Product Innovation",
+    "Digital Transformation",
+  ],
+  image: founder,
+  initials: "RV",
+},
   {
-    name: "Varsha Dhaketa",
-    role: "Co-Founder & Full Stack Developer",
-    bio: "Leads product engineering across web and mobile. Translates real operational workflows into resilient, beautifully crafted product experiences.",
-    expertise: [
-      { icon: Code2, label: "Product Engineering" },
-      { icon: Smartphone, label: "Mobile (React Native)" },
-      { icon: Database, label: "API & Data Modeling" },
-    ],
-    stack: ["React", "React Native", "TypeScript", "Express", "PostgreSQL", "Tailwind"],
-    image: cofounder,
-    initials: "VD",
-  },
+  name: "Varsha Dhaketa",
+  role: "Co-Founder & COO",
+  bio: "Oversees business operations, project delivery, and client success at SRM Innovations Hub. Ensures seamless execution, operational excellence, and exceptional customer experiences while driving sustainable business growth.",
+  expertise: [
+    { icon: Briefcase, label: "Business Operations" },
+    { icon: Users, label: "Client Success" },
+    { icon: ClipboardCheck, label: "Project Delivery" },
+  ],
+  stack: [
+    "Operations Management",
+    "Project Planning",
+    "Client Relations",
+    "Team Coordination",
+    "Business Strategy",
+    "Process Optimization",
+  ],
+  image: cofounder,
+  initials: "VD",
+},
 ];
 
 export function Founder() {
