@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Linkedin } from "lucide-react";
 import logo from "@/assets/new-logo.png";
 const cols = [
   {
@@ -84,28 +85,45 @@ export function Footer() {
               systems for growing businesses worldwide.
             </p>
 
-           <div className="mt-5 space-y-4 text-xs text-muted-foreground">
-  <div>
+           <div className="mt-5 text-xs text-muted-foreground">
+  {/* Email */}
+  <div className="mb-5">
     <span className="font-semibold text-white">Email</span>
     <div className="mt-1">info@srminnovationshub.com</div>
   </div>
 
-  <div>
-    <span className="font-semibold text-white">Head Office</span>
-    <div className="mt-1">
-      C-1 Balram Nagar,
-      <br />
-      Gwalior, Madhya Pradesh
+  {/* Addresses */}
+  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+    <div>
+      <span className="font-semibold text-white">Head Office</span>
+      <div className="mt-1 leading-6">
+        C-1 Balram Nagar,
+        <br />
+        Gwalior, Madhya Pradesh
+      </div>
+    </div>
+
+    <div>
+      <span className="font-semibold text-white">Branch Office</span>
+      <div className="mt-1 leading-6">
+        Indore,
+        <br />
+        Madhya Pradesh
+      </div>
     </div>
   </div>
 
-  <div>
-    <span className="font-semibold text-white">Branch Office</span>
-    <div className="mt-1">
-      Indore,
-      <br />
-      Madhya Pradesh
-    </div>
+  {/* Social */}
+  <div className="mt-6 flex items-center gap-3">
+    <a
+      href="https://www.linkedin.com/company/srm-innovations-hub"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-muted-foreground transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-cyan-400"
+      aria-label="LinkedIn"
+    >
+      <Linkedin size={18} />
+    </a>
   </div>
 </div>
           </div>
