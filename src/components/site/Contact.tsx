@@ -190,7 +190,7 @@ ${description}
               title="WhatsApp"
               desc="Fastest response, business hours."
               cta="Open chat"
-              href="https://wa.me/9630970989"
+              href="https://wa.me/9826032108"
             />
             <Quick
               icon={Mail}
