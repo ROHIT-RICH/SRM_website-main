@@ -1,5 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { FaLinkedinIn } from "react-icons/fa6";
+import {
+  FaLinkedinIn,
+  FaGithub,
+  FaInstagram,
+  FaFacebookF,
+  FaXTwitter,
+  FaYoutube,
+  FaDiscord,
+} from "react-icons/fa6";
 import logo from "@/assets/new-logo.png";
 const cols = [
   {
@@ -142,17 +150,127 @@ export function Footer() {
           </div>
 
           {/* Social */}
-  <div className="mt-6 flex items-center gap-3">
-    <a
-      href="https://www.linkedin.com/company/srm-innovations-hub"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-muted-foreground transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-cyan-400"
-      aria-label="LinkedIn"
-    >
-      <FaLinkedinIn className="h-5 w-5" />
-    </a>
-  </div>
+  <div className="mt-6 flex flex-wrap items-center gap-3">
+  {[
+    {
+      icon: FaLinkedinIn,
+      href: "https://www.linkedin.com/company/srm-innovations-hub",
+      label: "LinkedIn",
+      active: true,
+    },
+    {
+      icon: FaGithub,
+      label: "GitHub",
+      active: false,
+    },
+    {
+      icon: FaInstagram,
+      label: "Instagram",
+      active: false,
+    },
+    {
+      icon: FaFacebookF,
+      label: "Facebook",
+      active: false,
+    },
+    {
+      icon: FaXTwitter,
+      label: "X",
+      active: false,
+    },
+    {
+      icon: FaYoutube,
+      label: "YouTube",
+      active: false,
+    },
+  ].map(({ icon: Icon, href, label, active }) => (
+    <div key={label} className="group relative">
+      {active ? (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={label}
+          className="
+            flex
+            h-11
+            w-11
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/10
+            bg-white/5
+            text-muted-foreground
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:border-cyan-400
+            hover:bg-cyan-500/10
+            hover:text-cyan-400
+            hover:shadow-[0_0_20px_rgba(6,182,212,0.35)]
+          "
+        >
+          <Icon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+        </a>
+      ) : (
+        <button
+          type="button"
+          aria-label={`${label} Coming Soon`}
+          className="
+            flex
+            h-11
+            w-11
+            cursor-not-allowed
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/10
+            bg-white/5
+            text-muted-foreground/60
+            opacity-70
+            transition-all
+            duration-300
+            hover:border-amber-400
+            hover:bg-amber-500/10
+            hover:text-amber-300
+          "
+        >
+          <Icon className="h-5 w-5" />
+        </button>
+      )}
+
+      {!active && (
+        <div
+          className="
+            pointer-events-none
+            absolute
+            -top-11
+            left-1/2
+            -translate-x-1/2
+            whitespace-nowrap
+            rounded-lg
+            border
+            border-white/10
+            bg-[#0f172a]
+            px-3
+            py-1.5
+            text-xs
+            text-white
+            opacity-0
+            shadow-lg
+            transition-all
+            duration-200
+            group-hover:opacity-100
+          "
+        >
+          Coming Soon
+        </div>
+      )}
+    </div>
+  ))}
+</div>
 
           <div className="flex flex-wrap gap-5">
             <Link to="/privacy-policy" className="hover:text-white transition-colors">
